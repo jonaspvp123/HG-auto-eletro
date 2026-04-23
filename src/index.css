@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,800;0,900;1,400&family=Orbitron:wght@400;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-tech: "Orbitron", ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand-blue: #0a1128;
+  --color-brand-blue-dark: #020617;
+  --color-brand-gold: #d4af37;
+  --color-brand-gold-light: #f3e5ab;
+  --color-brand-neon: #00f0ff;
+}
+
+@layer utilities {
+  .text-glow-neon {
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.7), 0 0 20px rgba(0, 240, 255, 0.5);
+  }
+  .box-glow-neon {
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.3), inset 0 0 10px rgba(0, 240, 255, 0.1);
+  }
+  .text-glow-gold {
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+  }
+  .gold-gradient-text {
+    background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .bg-gold-gradient {
+    background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 50%, #b38728 100%);
+  }
+}
+
+body {
+  background-color: var(--color-brand-blue-dark);
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+::-webkit-scrollbar-thumb {
+  background: #0a1128;
+  border: 1px solid #d4af37;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d4af37;
+}
